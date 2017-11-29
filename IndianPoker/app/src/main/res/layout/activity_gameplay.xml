@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="10"
+    android:orientation="vertical">
+
+    <!--상대편 레이아웃-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.8"
+        android:background="#FFF198">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="오류 발생"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:layout_marginStart="10dp" />
+
+        <!--유저 정보-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/play_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="상대"
+                android:textColor="#fff"
+                android:textSize="23sp" />
+
+            <!--유저 이미지-->
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circle_white" />
+        </LinearLayout>
+
+        <!--상대 토큰-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="상대 토큰"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/enemyNumChipText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <!--배팅 토큰-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="배팅 토큰"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/enemyNumBetChipText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <!--상대 숫자-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="상대 숫자"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/enemyCardNumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#C1F0FF">
+
+        <!--내 토큰-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp">
+
+            <TextView
+                android:id="@+id/nChipText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:text="내 토큰"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--배팅 토큰-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nBetChipText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:text="배팅 토큰"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--내 숫자-->
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_height="115dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/roundly"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:id="@+id/cardNumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="?"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:text="내 숫자"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="70dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/nSeekBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="25sp"/>
+
+            <!--토큰 배팅 Seekbar-->
+            <SeekBar
+                android:id="@+id/betChipBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/seekbar_background"
+                android:thumb="@drawable/seekbar_controller" />
+        </LinearLayout>
+
+        <!--포기하기 버튼-->
+        <Button
+            android:id="@+id/giveUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:text="포기하기"
+            android:textColor="@color/defaultTextColor"
+            android:textSize="25sp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/roundly" />
+
+        <!--배팅 버튼-->
+        <Button
+            android:id="@+id/betBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="배팅!"
+            android:textColor="@color/defaultTextColor"
+            android:textSize="25sp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/roundly" />
+    </RelativeLayout>
+</LinearLayout>

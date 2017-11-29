@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF198"
+    tools:context="comkimwonjun.httpsgithub.indianpoker.MainActivity">
+
+    <TextView
+        android:id="@+id/logoText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Indian"
+        android:textColor="#FFF"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/logoText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoText1"
+        android:layout_centerHorizontal="true"
+        android:text="Poker"
+        android:textColor="#FFF"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/GameRoomBtn"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_above="@+id/Buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Game Start"
+        android:textColor="#C1F0FF"
+        android:textSize="50sp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/Buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/ProfileBtn"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:text="프로필"
+            android:textSize="20sp"
+            android:textColor="#C2C2C2"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/RankingBtn"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector"
+            android:text="랭킹"
+            android:textSize="20sp"
+            android:textColor="#C2C2C2"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/SettingBtn"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:text="설정"
+            android:textSize="20sp"
+            android:textColor="#C2C2C2"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -54,6 +54,42 @@ Indian Poker
 
 -----------
 
+##DB 구조
+-----------
+User
+-----------
+user_key(int(11), PK, NN, AI)
+-
+user_id(varchar(20), NN, UQ)
+-
+user_pw(varchar(20), NN)
+-
+user_nickname(varchar(20), NN)
+-
+user_email(varchar(50), NN)
+-
+user_win(INT, NN)
+-
+user_date(timestamp(), NN)
+-----------
+GameRoom
+-----------
+room_key(int(11), PK, NN, AI) 
+-
+room_owner_id(int(11), FK)
+-
+room_pw(INT(4)) 
+-
+player2_id(int(11), FK)
+-
+room_flag(INT, NN) 
+-
+room_endflag(INT, NN)
+-
+room_winner(int(11))
+-
+room_date(timestamp(), NN)
+-----------
 논의해야할 것
 -----------
 - 추후에 봐요
